@@ -13,7 +13,7 @@
     <td align="center"><a href="https://github.com/jian1114"><img src="https://avatars.githubusercontent.com/u/77630266?v=4" width="100px;" alt=""/>         <br /><sub><b>jian1114</b><br>
     <td align="center"><a href="https://github.com/beginner0107"><img src="https://avatars.githubusercontent.com/u/81161819?v=4" width="100px;" alt=""/>         <br /><sub><b>beginner0107</b><br>
     <td align="center"><a href="https://github.com/ayocado"><img src="https://avatars.githubusercontent.com/u/89889583?v=4" width="100px;" alt=""/>         <br /><sub><b>ayocado</b><br>
-    <td align="center"><a href="https://github.com/ayocado"><img src="https://avatars.githubusercontent.com/u/88229105?v=4" width="100px;" alt=""/>         <br /><sub><b>bokkuembab</b><br>
+    <td align="center"><a href="https://github.com/bokkuembab"><img src="https://avatars.githubusercontent.com/u/88229105?v=4" width="100px;" alt=""/>         <br /><sub><b>bokkuembab</b><br>
 </table><br />
 
 ## 📒 How to study
