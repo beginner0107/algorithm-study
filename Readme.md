@@ -8,11 +8,12 @@
 ## 🙋 Contributors
 
 <table><tr>
-    <td align="center"><a href="https://github.com/kimyoo04"><img src="https://user-images.githubusercontent.com/58503130/216962339-c0058df4-62e9-4ea6-8927-4eaf81da8421.jpg" width="100px;" alt=""/>         <br /><sub><b>kimyoo04</b><br>
-    <td align="center"><a href="https://github.com/Pang-dachu"><img src="https://user-images.githubusercontent.com/58503130/216962531-fcd72050-2ad0-4242-9e51-a53f3d77a8d5.png" width="100px;" alt=""/>         <br /><sub><b>Pang-dachu</b><br>
-    <td align="center"><a href="https://github.com/jian1114"><img src="https://user-images.githubusercontent.com/58503130/216962621-9ef9c8df-42ea-4d63-a6ab-a992762cbcbe.png" width="100px;" alt=""/>         <br /><sub><b>jian1114</b><br>
-    <td align="center"><a href="https://github.com/beginner0107"><img src="https://user-images.githubusercontent.com/58503130/216962663-b3ce251b-b44a-4491-b42b-ed98e7175331.png" width="100px;" alt=""/>         <br /><sub><b>beginner0107</b><br>
-    <td align="center"><a href="https://github.com/ayocado"><img src="https://user-images.githubusercontent.com/58503130/216962706-f76207cf-54c9-4cdf-8d72-07ed87b3ce56.jpg" width="100px;" alt=""/>         <br /><sub><b>ayocado</b><br>
+    <td align="center"><a href="https://github.com/kimyoo04"><img src="https://avatars.githubusercontent.com/u/58503130?v=4" width="100px;" alt=""/>         <br /><sub><b>kimyoo04</b><br>
+    <td align="center"><a href="https://github.com/Pang-dachu"><img src="https://avatars.githubusercontent.com/u/54354769?v=4" width="100px;" alt=""/>         <br /><sub><b>Pang-dachu</b><br>
+    <td align="center"><a href="https://github.com/jian1114"><img src="https://avatars.githubusercontent.com/u/77630266?v=4" width="100px;" alt=""/>         <br /><sub><b>jian1114</b><br>
+    <td align="center"><a href="https://github.com/beginner0107"><img src="https://avatars.githubusercontent.com/u/81161819?v=4" width="100px;" alt=""/>         <br /><sub><b>beginner0107</b><br>
+    <td align="center"><a href="https://github.com/ayocado"><img src="https://avatars.githubusercontent.com/u/89889583?v=4" width="100px;" alt=""/>         <br /><sub><b>ayocado</b><br>
+    <td align="center"><a href="https://github.com/ayocado"><img src="https://avatars.githubusercontent.com/u/88229105?v=4" width="100px;" alt=""/>         <br /><sub><b>ayocado</b><br>
 </table><br />
 
 ## 📒 How to study
