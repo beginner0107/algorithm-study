@@ -2,7 +2,7 @@
 
 ## 📒 Algorithm **difficulty**
 
-- [백준](https://www.acmicpc.net/) (실버 - 골드)
+- [백준](https://www.acmicpc.net/) (브론즈 - 골드)
 - [프로그래머스](https://programmers.co.kr/learn/challenges?tab=all_challenges) (level 1 - 3)
 
 ## 🙋 Contributors
@@ -32,6 +32,7 @@
 
 ### ✅ Code
 
+- 파일명은 **"문제플랫폼 난이도 문제번호 문제이름"**
 - 주석으로 설명 달기
 - 변수명과 함수명은 알아볼 수 있도록 선언하기
 
@@ -40,25 +41,24 @@
 - 머지 후 orgainzation의 algorithm-study 레포지토리에 합치기
 
 ```sh
-create | fix : 작성 | 수정
+Create | Fix : 작성 | 수정
     docs : README.md 등 문서 작성 및 수정
-
-create | fix | add : 코드 작성 | 수정 | 기존 문제에 풀이 추가
     code : 코드 작성
 
-git commit -m "create docs : 본명 주제명폴더 파일명.md"
+git commit -m "Create docs : 본명 파일명.md"
 # 작성 예시
-git commit -m "fix docs : 김유 트리 트리구현방법.md"
+git commit -m "Fix docs : 김유 트리구현방법.md"
 
-git commit -m "create code : 본명 문제플랫폼 난이도 문제번호 문제유형 문제이름"
+풀이파일명 = 문제플랫폼 난이도 문제번호 문제이름
+git commit -m "Create code : 본명 풀이파일명"
 # 작성 예시
-git commit -m "create code : 김유 PGS level1 1845 해시 포켓몬"
-git commit -m "add code : 김유 PGS level1 1845 해시 포켓몬"
-git commit -m "fix code : 김유 BOJ 골드4 9663 벡트레킹 N-Queen"
+git commit -m "Create code : 김유 PGS level1 1845 포켓몬"
+git commit -m "Add code : 김유 PGS level1 1845 포켓몬"
+git commit -m "Fix code : 김유 BOJ 골드4 9663 N-Queen"
 
-merge : 본명 주제
+Merge : 본명 주제
 # 작성 예시
-merge : 김유 트리
+Merge : 김유 트리
 ```
 
 > Platform name
