@@ -49,11 +49,10 @@ git commit -m "Create docs : 본명 파일명.md"
 # 작성 예시
 git commit -m "Fix docs : 김유 트리구현방법.md"
 
-풀이파일명 = 문제플랫폼 난이도 문제번호 문제이름
 git commit -m "Create code : 본명 풀이파일명"
 # 작성 예시
+풀이파일명 = 문제플랫폼 난이도 문제번호 문제이름
 git commit -m "Create code : 김유 PGS level1 1845 포켓몬"
-git commit -m "Add code : 김유 PGS level1 1845 포켓몬"
 git commit -m "Fix code : 김유 BOJ 골드4 9663 N-Queen"
 
 Merge : 본명 주제
