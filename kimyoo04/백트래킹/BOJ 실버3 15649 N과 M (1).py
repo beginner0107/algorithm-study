@@ -25,7 +25,7 @@ import sys; input=sys.stdin.readline
 
 # 함수 호출 스택 구현 방법
 def back(n_list):
-    if len(n_list) == M: # 배열의 길이 M
+    if len(n_list) == M:
         print(" ".join(map(str, n_list)))
         return
 
@@ -47,10 +47,8 @@ def back(n_list):
 
 
 
-# N 사용할 숫자 수
-# M 배열의 길이
+# N 사용할 숫자 수, M 배열의 길이
 N, M = map(int, input().split())
-
 back([])
 
 
