@@ -49,16 +49,15 @@
 
 - commit message convention
 
-```sh
-Create | Fix : 작성 | 수정
-    docs : README.md 등 문서 작성 및 수정
-    code : 코드 작성
-```
+> Create | Fix | Delete : 작성 | 수정 | 삭제
+>    docs : README.md 
+>    code : 코드 작성
 
 - docs commit message
 
 ```sh
 git commit -m "Create docs : 본명 파일명.md"
+
 # 작성 예시
 git commit -m "Fix docs : 김유 트리구현방법.md"
 ```
@@ -67,10 +66,13 @@ git commit -m "Fix docs : 김유 트리구현방법.md"
 
 ```sh
 git commit -m "Create code : 본명 풀이파일명"
-# 작성 예시
+
 풀이파일명 = 문제플랫폼 난이도 문제번호 문제이름
+
+# 작성 예시
 git commit -m "Create code : 김유 PGS level1 1845 포켓몬"
 git commit -m "Fix code : 김유 BOJ 골드4 9663 N-Queen"
+git commit -m "Delete code : 김유 BOJ 골드4 9663 N-Queen"
 ```
 
 > Platform name
@@ -90,6 +92,7 @@ git commit -m "Fix code : 김유 BOJ 골드4 9663 N-Queen"
 
 ```sh
 Merge : 본명 주제
+
 # 작성 예시
 Merge : 김유 트리
 ```
