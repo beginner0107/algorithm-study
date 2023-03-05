@@ -28,7 +28,7 @@ for i in range(n) :
     else :
         nWoman.append(h)
 
-# 양수 오름차순 정렬, 음수 내림차순 정렬
+# 양수 남/녀 오름차순 정렬, 음수 남/녀 내림차순 정렬
 nMan.sort(reverse=True)
 nWoman.sort(reverse=True)
 pMan.sort()
