@@ -47,11 +47,10 @@
 핵심
 - 남자 여자의 키의 합이 0이면 매칭 x, 음수이면 매칭, 양수이면 매칭 x
 - 매칭되는 남자와 여자는 같이 양수이거나, 음수이면 매칭 x
-- 가장 작은 사람이 가장 작은 사람을 만나기 -> 먼저 큰 사람들끼리 매칭
+- 가장 작은 사람이 가장 작은 사람을 만나기 -> 작은 사람끼리 먼저 매칭
 """
 
 import sys; input=sys.stdin.readline
-from heapq import heappush
 
 N = int(input())
 
@@ -63,41 +62,30 @@ pm, mm, pf, mf = [], [], [], []
 
 # + 와 - 구분 / 큰 키 순으로 정렬
 for male in males:
-    if male >= 0:
-        heappush(pm, -male)
+    if male > 0:
+        pm.append(male)
     else:
-        heappush(mm, male)
+        mm.append(male)
 
 for female in females:
-    if female >= 0:
-        heappush(pf, -female)
+    if female > 0:
+        pf.append(female)
     else:
-        heappush(mf, female)
+        mf.append(female)
 
-pm = list(map(lambda x: -x, pm))
-pf = list(map(lambda x: -x, pf))
-mm = list(map(lambda x: -x, mm))
-mf = list(map(lambda x: -x, mf))
-
-print(pm)
-print(mm)
-print(pf)
-print(mf)
+pm.sort(); mm.sort(reverse=True)
+pf.sort(); mf.sort(reverse=True)
 
 def match(minus, plus):
-    m_len, p_len = len(minus), len(plus)
-    m_indx, p_indx = 0, 0
     cnt = 0
-
-    while m_indx < m_len and p_indx < p_len:
-        # 두 이성을 더했을 때 음수가 나오면
-        if minus[m_indx] > plus[p_indx]:
-            cnt += 1 # 매칭
-            m_indx += 1
-            p_indx += 1
-        else:
-            p_indx += 1 # 다른 작은 이성 찾기
-
+    while minus:
+        m = minus.pop()
+        while plus :
+            p = plus.pop()
+            # 두 이성을 더했을 때 음수가 나오면
+            if m + p < 0:
+                cnt += 1 # 매칭
+                break
     return cnt
 
 print(match(mf, pm) + match(mm, pf))
