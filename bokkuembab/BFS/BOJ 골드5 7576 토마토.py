@@ -48,6 +48,7 @@ for r in range(row):
     for c in range(col):
         if not box[r][c]:
             cnt = -1
+            break
             
 # 정답 출력
 print(cnt)
