@@ -2,40 +2,37 @@ from collections import deque
 import sys
 #input = sys.stdin.readline
 
-m, n = map(int, input().split())
-farm = [list(map(int, input().split())) for _ in range(n)]
-moves = [[-1, 0], [0, 1], [1, 0], [0, -1]]
+m, n, h = map(int,input().split())
+farm = []
 q = deque([])
+moves = [[-1, 0, 0], [1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]
 day = 0
 
 # 익은 토마토가 있는 위치 입력
-for i in range(n):
-    for j in range(m):
-        if farm[i][j] == 1:
-            q.append([i, j])
+for i in range(h):
+    tmp = []
+    for j in range(n):
+        tmp.append(list(map(int, input().split())))
+        for k in range(m):
+            if tmp[j][k]==1:
+                q.append([i,j,k])
+    farm.append(tmp)
 
-def bfs():
-    while q:
-        x, y = q.popleft()
-        for dx, dy in moves:
-            nx, ny = x + dx, y + dy
-            if nx < 0 or nx >= n or ny < 0 or ny >= m:
-                continue
-            # 이동한 위치가 안 익은 토마토인 경우, 계속 +1을 해주며 갱신
-            # 즉, 1부터 시작하여 0에 접근할 수 있을 때까지 날짜 갱신
-            if farm[nx][ny] == 0:
-                farm[nx][ny] = farm[x][y] + 1
-                q.append([nx, ny])
+while(q):
+    x, y, z = q.popleft()    
+    for dx, dy, dz in moves:
+        nx, ny, nz = x+dx, y+dy, z+dz
+        if nx < 0 or nx >= h or ny < 0 or ny >= n or nz < 0 or nz >= m:
+            continue
+        if farm[nx][ny][nz] == 0:
+            q.append([nx, ny, nz])
+            farm[nx][ny][nz] = farm[x][y][z] + 1
 
-# bfs()를 실행하면, 영향을 받을 수 있는 모든 토마토는 1 이상의 값을 가지게 됨
-bfs()
-
-# 행 별로 접근하며, 만약 안 익은 토마토가 있는 경우, -1 출력 & 종료
-# 만약 0이 없다면 그 행에서 가장 큰 값을 ans에 저장
 for i in farm:
     for j in i:
-        if j == 0:
-            print(-1)
-            exit(0)
-    day = max(day, max(i))
-print(day - 1)
+        for k in j:
+            if k==0:
+                print(-1)
+                exit(0)
+        day = max(day, max(j))
+print(day-1)
