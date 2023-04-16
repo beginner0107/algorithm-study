@@ -22,24 +22,19 @@ def flip_33(sr, sc):
             ali[row][col] = 1 - ali[row][col]
 
 # 3*3 크기보다 작은데, 다른 요소가 있는지 먼저 고려
-# 행, 열 중 하나라도 크기가 3보다 작으면 토글 불가
-if (len(ali) < n) or (len(ali[0]) < m):    
-    for row in range(len(ali)):
-        if ali[row] != bli[row]:
-            ans = -1
-            break
+#### 해당 부분 없어도 range 범위에서 돌아가지 않고, 마지막 ali==bli 출력 확인에서 고려됨
+
 # 3*3 크기로 한 칸씩 옮겨가며 확인
-else:
-    for row in range(n - 2):    # 행 방향 이동 가능 횟수
-        for col in range(m - 2):    # 열 방향 이동 가능 횟수
-            if ali[row][col] != bli[row][col]:    # 3*3의 첫번째 요소가 같지 않다면,
-                flip_33(row, col)    # 3*3 부분 행렬 뒤집고,
-                ans += 1    # 횟수 늘려주기
-                
-            if ali == bli:
-                break
+for row in range(n - 2):    # 행 방향 이동 가능 횟수
+    for col in range(m - 2):    # 열 방향 이동 가능 횟수
+        if ali[row][col] != bli[row][col]:    # 3*3의 첫번째 요소가 같지 않다면,
+            flip_33(row, col)    # 3*3 부분 행렬 뒤집고,
+            ans += 1    # 횟수 늘려주기
+            
         if ali == bli:
-            break   
+            break
+    if ali == bli:
+        break   
 
 # 결과 출력
 if ali == bli:    # 전체를 돌면서 토글했을 때 같다면
