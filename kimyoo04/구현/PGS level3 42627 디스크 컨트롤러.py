@@ -23,6 +23,7 @@ def solution1(jobs):
     i = 0 # 작업 카운트
     waiting = [] # 대기 중인 작업 (최소힙)
 
+
     while i < cnt_jobs:
         for job_start, job_time in jobs:
             # 실행한 작업보다 일찍 혹은 같게 작업요청이 들어왔을때
@@ -44,28 +45,32 @@ def solution1(jobs):
     return int(total / cnt_jobs)
 
 
-import heapq
-
 def solution2(jobs):
+    # 작업시간을 기준으로 먼저 내림 차순 정렬
     tasks = sorted([(x[1], x[0]) for x in jobs],
                     key=lambda x: (x[1], x[0]),
                     reverse=True)
     waiting = []
-    heapq.heappush(waiting, tasks.pop())
+    heappush(waiting, tasks.pop())
     now, total = 0, 0
 
     while waiting:
-        duration, req_time = heapq.heappop(waiting)
+        duration, req_time = heappop(waiting)
+
+        # 기다린 시간을 total에 더하기
         now = max(now + duration, req_time + duration)
         total += now - req_time
 
+        # task가 남아있고, 현재 시간이 요청 시간을 지난 경우
         while len(tasks) > 0 and tasks[-1][1] <= now:
-            heapq.heappush(waiting, tasks.pop())
+            heappush(waiting, tasks.pop())
 
+        # tasks는 남아있고, waiting은 없을 때
         if len(tasks) > 0 and len(waiting) == 0:
-            heapq.heappush(waiting, tasks.pop())
+            heappush(waiting, tasks.pop())
 
     return total // len(jobs)
 
 a = solution2([[0, 3], [1, 9], [2, 6]])
+
 print(a)
