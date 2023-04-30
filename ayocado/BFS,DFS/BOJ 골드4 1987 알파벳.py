@@ -13,7 +13,7 @@ yy = [0, 0, 1, -1]
 maxDist = 1
 while stack:
     row, col, dist, alphabet = stack.pop()
-    print(row, col, dist, alphabet)
+    
     for i in range(4):
         newRow = row + xx[i]
         newCol = col + yy[i]
